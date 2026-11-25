@@ -1,0 +1,5 @@
+Transcript — Huwa music sample
+Instrumental music sample used to represent a Huwa music session.
+A real session features Nubian instruments such as the oud and
+the tar (frame drum), with a short spoken introduction naming the
+song and where it comes from.
