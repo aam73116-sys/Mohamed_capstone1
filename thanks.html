@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!-- WHAT IT IS: the thank-you page shown after the contact form is sent.
+     WHAT IT DOES: confirms the message went through and links back to the site.
+     WHAT IT MEANS: the form's hidden _next field redirects here on success. -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thank You — Huwa</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="logo" aria-label="Huwa home">
+        <svg class="logo__mark" width="42" height="42" viewBox="0 0 48 48" role="img" aria-labelledby="logoTitle">
+          <title id="logoTitle">Huwa logo — a Nubian domed house beneath the sun</title>
+          <circle cx="24" cy="13" r="6" fill="#c46a3f"/>
+          <path d="M8 40 L8 27 Q24 11 40 27 L40 40 Z" fill="#7a3b2e"/>
+          <rect x="20" y="30" width="8" height="10" rx="4" fill="#fdf8f3"/>
+          <rect x="5" y="40" width="38" height="3" rx="1.5" fill="#7a3b2e"/>
+        </svg>
+        <span class="logo__name">Huwa</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu"
+              aria-controls="primaryNav" aria-expanded="false">&#9776;</button>
+      <nav class="nav" id="primaryNav" aria-label="Main navigation">
+        <ul class="nav__list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Content</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="stub">
+      <h1>Thank you!</h1>
+      <p>Your message is on its way to the Huwa team. We'll get back to you soon.</p>
+      <a href="index.html" class="btn">Back to Home</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Huwa. Celebrating Nubian culture.</p>
+      <p><a href="mailto:amgadbisher24@gmail.com">amgadbisher24@gmail.com</a></p>
+      <div class="site-footer__social">
+        <a href="#" aria-label="Huwa on Instagram">Instagram</a>
+        <a href="#" aria-label="Huwa on YouTube">YouTube</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<!-- WHAT IT IS: the Gallery / Media page (page 4 of 5) of the Huwa site.
+     WHAT IT DOES: shows a photo grid plus one video and one audio sample.
+     WHAT IT MEANS: lang="en" states the page language for screen readers. -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery — Huwa</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- =================================================================
+       HEADER (identical markup to the other pages, with the SVG logo)
+       ================================================================= -->
+  <header class="site-header">
+    <div class="container">
+
+      <a href="index.html" class="logo" aria-label="Huwa home">
+        <svg class="logo__mark" width="42" height="42" viewBox="0 0 48 48" role="img" aria-labelledby="logoTitle">
+          <!-- Real hand-written logo: sun (circle) + domed house (path) + door and ground (rects) -->
+          <title id="logoTitle">Huwa logo — a Nubian domed house beneath the sun</title>
+          <circle cx="24" cy="13" r="6" fill="#c46a3f"/>
+          <path d="M8 40 L8 27 Q24 11 40 27 L40 40 Z" fill="#7a3b2e"/>
+          <rect x="20" y="30" width="8" height="10" rx="4" fill="#fdf8f3"/>
+          <rect x="5" y="40" width="38" height="3" rx="1.5" fill="#7a3b2e"/>
+        </svg>
+        <span class="logo__name">Huwa</span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu"
+              aria-controls="primaryNav" aria-expanded="false">&#9776;</button>
+
+      <nav class="nav" id="primaryNav" aria-label="Main navigation">
+        <ul class="nav__list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Content</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <main>
+
+    <!-- PAGE HERO: short banner with the page title and a one-line intro. -->
+    <section class="page-hero">
+      <div class="container">
+        <h1>Gallery</h1>
+        <p>A look at Nubian life, with a short film and a music sample from Huwa.</p>
+      </div>
+    </section>
+
+    <!-- =============================================================
+         PHOTO GALLERY — CSS Grid using the auto-fit recipe.
+         WHAT IT MEANS: each <figure> is one cell; object-fit: cover (in CSS)
+         crops every photo to the same size without squishing it. Each image
+         has a meaningful alt and a visible caption.
+         ============================================================= -->
+    <section class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2>Scenes of Nubia</h2>
+          <p>Eight illustrations of the places, crafts and traditions Huwa celebrates.</p>
+        </div>
+
+        <div class="gallery">
+
+          <figure class="photo">
+            <img src="img/g-houses.jpg" alt="Row of domed Nubian mud-brick houses glowing against an orange sunset">
+            <figcaption>Domed houses at sunset · a Nubian village</figcaption>
+          </figure>
+
+          <figure class="photo">
+            <img src="img/g-palms.jpg" alt="Two palm trees beside the dark water of the Nile at dusk">
+            <figcaption>Palms along the Nile</figcaption>
+          </figure>
+
+          <figure class="photo">
+            <img src="img/g-pattern.jpg" alt="Repeating geometric triangle pattern in teal, orange, gold and brown">
+            <figcaption>Traditional Nubian geometric pattern</figcaption>
+          </figure>
+
+          <figure class="photo">
+            <img src="img/g-pottery.jpg" alt="Two handmade Nubian clay water pots with painted bands on a shelf">
+            <figcaption>Handmade clay pottery</figcaption>
+          </figure>
+
+          <figure class="photo">
+            <img src="img/g-felucca.jpg" alt="A white-sailed felucca boat floating on the blue Nile under a soft sun">
+            <figcaption>A felucca on the Nile</figcaption>
+          </figure>
+
+          <figure class="photo">
+            <img src="img/g-oud.jpg" alt="A wooden oud, the pear-shaped Nubian string instrument, with a round sound hole">
+            <figcaption>The oud · a Nubian string instrument</figcaption>
+          </figure>
+
+          <figure class="photo">
+            <img src="img/g-doorway.jpg" alt="A brightly painted arched doorway with teal and gold wooden doors">
+            <figcaption>A painted Nubian doorway</figcaption>
+          </figure>
+
+          <figure class="photo">
+            <img src="img/g-dates.jpg" alt="A plate of fresh brown dates on a cream dish with a gold rim">
+            <figcaption>Fresh dates · a Nubian table staple</figcaption>
+          </figure>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================================================
+         MEDIA — one video and one audio sample.
+         WHAT IT MEANS: controls lets the user play/pause; there is NO autoplay,
+         so nothing starts on its own; preload="metadata" loads only the
+         playback bar, not the whole file; the text between the tags is the
+         fallback shown if the browser can't play the media.
+         ============================================================= -->
+    <section class="section section--tint">
+      <div class="container">
+        <div class="section__head">
+          <h2>Watch &amp; Listen</h2>
+          <p>A short sample film and a music clip.</p>
+        </div>
+
+        <div class="media">
+
+          <!-- VIDEO -->
+          <figure class="media__item">
+            <video controls preload="metadata" width="100%">
+              <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+              Your browser does not support embedded video.
+              <a href="https://www.w3schools.com/html/mov_bbb.mp4">Download the video</a> instead.
+            </video>
+            <figcaption>
+              Sample film — a placeholder clip standing in for a Huwa episode.
+              <a href="transcripts/video.txt">Read the transcript</a>.
+            </figcaption>
+          </figure>
+
+          <!-- AUDIO -->
+          <figure class="media__item">
+            <audio controls preload="metadata">
+              <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+              Your browser does not support embedded audio.
+              <a href="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3">Download the audio</a> instead.
+            </audio>
+            <figcaption>
+              Listen — an instrumental sample standing in for a Huwa music session.
+              <a href="transcripts/audio.txt">Read the transcript</a>.
+            </figcaption>
+          </figure>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA to the Contact page. -->
+    <section class="cta">
+      <h2>Want to share a photo or song?</h2>
+      <p>If you have Nubian photos, video or music to add, we'd love to see them.</p>
+      <a href="contact.html" class="btn">Contact Us</a>
+    </section>
+
+  </main>
+
+  <!-- FOOTER (identical markup to the other pages) -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Huwa. Celebrating Nubian culture.</p>
+      <p><a href="mailto:amgadbisher24@gmail.com">amgadbisher24@gmail.com</a></p>
+      <div class="site-footer__social">
+        <a href="#" aria-label="Huwa on Instagram">Instagram</a>
+        <a href="#" aria-label="Huwa on YouTube">YouTube</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

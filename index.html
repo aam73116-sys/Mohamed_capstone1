@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<!-- WHAT IT IS: the Home page (page 1 of 5) of the Huwa capstone site.
+     WHAT IT DOES: it is the page visitors land on first.
+     WHAT IT MEANS: lang="en" tells the browser and screen readers the page
+     language. -->
+<html lang="en">
+<head>
+  <!-- charset: how the text is encoded so accented characters show correctly -->
+  <meta charset="UTF-8">
+  <!-- viewport: makes the page scale to the device width so mobile looks right -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- descriptive title: shown on the browser tab and in search results -->
+  <title>Huwa — Celebrating Nubian Culture</title>
+  <!-- link to the ONE shared stylesheet that styles all five pages -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- =================================================================
+       HEADER (reused identically on all five pages)
+       WHAT IT IS: the sticky top bar. WHAT IT DOES: holds the logo and the
+       nav. WHAT IT MEANS: <header> is a landmark that marks the page's
+       introductory banner.
+       ================================================================= -->
+  <header class="site-header">
+    <div class="container">
+
+      <!-- Placeholder SVG logo (a circle + text). Replaced with a real
+           hand-drawn SVG in Assignment 2. role/aria make it accessible. -->
+      <a href="index.html" class="logo" aria-label="Huwa home">
+        <svg class="logo__mark" width="42" height="42" viewBox="0 0 48 48" role="img" aria-labelledby="logoTitle">
+          <!-- Real hand-written logo: sun (circle) + domed house (path) + door and ground (rects) -->
+          <title id="logoTitle">Huwa logo — a Nubian domed house beneath the sun</title>
+          <circle cx="24" cy="13" r="6" fill="#c46a3f"/>
+          <path d="M8 40 L8 27 Q24 11 40 27 L40 40 Z" fill="#7a3b2e"/>
+          <rect x="20" y="30" width="8" height="10" rx="4" fill="#fdf8f3"/>
+          <rect x="5" y="40" width="38" height="3" rx="1.5" fill="#7a3b2e"/>
+        </svg>
+        <span class="logo__name">Huwa</span>
+      </a>
+
+      <!-- Hamburger button: hidden on desktop, shown under 768px by the CSS.
+           aria-controls/aria-expanded tell screen readers what it opens. -->
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu"
+              aria-controls="primaryNav" aria-expanded="false">&#9776;</button>
+
+      <!-- NAV: the same five links on every page so there are no dead ends.
+           This identical block is copied into all five HTML files. -->
+      <nav class="nav" id="primaryNav" aria-label="Main navigation">
+        <ul class="nav__list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Content</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- =================================================================
+       MAIN: the unique content of the Home page.
+       WHAT IT MEANS: <main> is the landmark for the page's primary content —
+       exactly one per page.
+       ================================================================= -->
+  <main>
+
+    <!-- HERO: first impression. Flexbox column centers the three items and
+         min-height:80vh (set in CSS) makes it fill the screen. -->
+    <section class="hero">
+      <h1>Discover the Soul of Nubia</h1>
+      <p>Huwa is a cultural channel sharing the language, food, music and
+         traditions of Nubia through short videos and simple lessons.</p>
+      <div class="hero__actions">
+        <!-- Primary CTA styled as a button -->
+        <a href="gallery.html" class="btn">Watch the Videos</a>
+        <a href="about.html" class="btn btn--ghost">Our Story</a>
+      </div>
+    </section>
+
+    <!-- GLIMPSE: the one required <img> with meaningful alt text. The CSS
+         rule img{max-width:100%} keeps it from ever overflowing. -->
+    <section class="section">
+      <figure class="glimpse">
+        <img src="img/hero.jpg"
+             alt="A Nubian village at sunset with domed houses, palm trees and the Nile">
+        <figcaption>Golden hour over a Nubian village along the Nile.</figcaption>
+      </figure>
+    </section>
+
+    <!-- FEATURES: three cards in a responsive row (Flexbox flex-wrap). Each
+         card has an emoji icon, a title and a short description. -->
+    <section class="section" aria-labelledby="features-title">
+      <div class="container">
+        <div class="section__head">
+          <h2 id="features-title">What You'll Find</h2>
+          <p>Three ways Huwa keeps Nubian heritage alive and close.</p>
+        </div>
+        <div class="cards">
+
+          <article class="card">
+            <div class="card__icon" aria-hidden="true">&#128483;</div>
+            <h3>Language</h3>
+            <p>Short, friendly lessons that help you read, speak and keep the
+               Nubian language alive.</p>
+          </article>
+
+          <article class="card">
+            <div class="card__icon" aria-hidden="true">&#127858;</div>
+            <h3>Food</h3>
+            <p>Traditional recipes and the stories behind the dishes served at
+               Nubian tables.</p>
+          </article>
+
+          <article class="card">
+            <div class="card__icon" aria-hidden="true">&#127925;</div>
+            <h3>Music</h3>
+            <p>The rhythms, instruments and songs that carry Nubian celebration
+               and memory.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- REPEAT CTA: a second call to action that sends visitors to Contact. -->
+    <section class="cta">
+      <h2>Join the Huwa Community</h2>
+      <p>Follow along, suggest a topic, or tell us your own Nubian story.</p>
+      <a href="contact.html" class="btn">Get in Touch</a>
+    </section>
+
+  </main>
+
+  <!-- =================================================================
+       FOOTER (reused identically on all five pages)
+       ================================================================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Huwa. Celebrating Nubian culture.</p>
+      <p><a href="mailto:amgadbisher24@gmail.com">amgadbisher24@gmail.com</a></p>
+      <div class="site-footer__social">
+        <a href="#" aria-label="Huwa on Instagram">Instagram</a>
+        <a href="#" aria-label="Huwa on YouTube">YouTube</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- the ONE shared script, loaded before </body> so the HTML exists first -->
+  <script src="js/script.js"></script>
+</body>
+</html>

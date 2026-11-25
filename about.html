@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<!-- WHAT IT IS: the About page (page 2 of 5) of the Huwa capstone site.
+     WHAT IT DOES: tells the story of the Huwa channel and what it believes.
+     WHAT IT MEANS: lang="en" tells the browser and screen readers the page
+     language. -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Huwa</title>
+  <!-- the same shared stylesheet used by every page -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- =================================================================
+       HEADER (identical markup to index.html, with the real SVG logo)
+       ================================================================= -->
+  <header class="site-header">
+    <div class="container">
+
+      <a href="index.html" class="logo" aria-label="Huwa home">
+        <svg class="logo__mark" width="42" height="42" viewBox="0 0 48 48" role="img" aria-labelledby="logoTitle">
+          <!-- Real hand-written logo: sun (circle) + domed house (path) + door and ground (rects) -->
+          <title id="logoTitle">Huwa logo — a Nubian domed house beneath the sun</title>
+          <circle cx="24" cy="13" r="6" fill="#c46a3f"/>
+          <path d="M8 40 L8 27 Q24 11 40 27 L40 40 Z" fill="#7a3b2e"/>
+          <rect x="20" y="30" width="8" height="10" rx="4" fill="#fdf8f3"/>
+          <rect x="5" y="40" width="38" height="3" rx="1.5" fill="#7a3b2e"/>
+        </svg>
+        <span class="logo__name">Huwa</span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu"
+              aria-controls="primaryNav" aria-expanded="false">&#9776;</button>
+
+      <nav class="nav" id="primaryNav" aria-label="Main navigation">
+        <ul class="nav__list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Content</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <main>
+
+    <!-- PAGE HERO: a short banner with the page title and one-line intro. -->
+    <section class="page-hero">
+      <div class="container">
+        <h1>About</h1>
+        <p>The story behind Huwa — why we started, and what we hope to keep alive.</p>
+      </div>
+    </section>
+
+    <!-- OUR STORY: two columns on desktop (text + image) built with CSS Grid.
+         WHAT IT MEANS: grid-template-columns: 1fr 1fr makes two equal columns;
+         the media query collapses them to one on phones. -->
+    <section class="section">
+      <div class="container story">
+        <div class="story__text">
+          <h2>Our Story</h2>
+          <p>Huwa began with a simple worry: that the language, songs and
+             everyday traditions of Nubia were slipping away faster than anyone
+             was writing them down. Families who once lived along the Nile are
+             now spread across cities and countries, and the children growing up
+             far from home rarely hear the old words.</p>
+          <p>So we started a small channel. We film short videos — a grandmother
+             explaining a recipe, a musician tuning an oud, a few words of the
+             Nubian language with their meaning — and we keep them friendly and
+             easy to follow. No lectures, no heavy history; just real people
+             sharing what they know.</p>
+          <p>Today Huwa is a growing community of people who want to reconnect
+             with their roots, and of curious visitors meeting Nubian culture for
+             the first time. Every video, recipe and song we save is one more
+             piece of heritage that will not be lost.</p>
+        </div>
+        <div class="story__media">
+          <!-- Photo with a meaningful alt describing the scene, not the file. -->
+          <img src="img/hero.jpg"
+               alt="A Nubian village at sunset with domed houses, palm trees and the Nile">
+        </div>
+      </div>
+    </section>
+
+    <!-- WHAT WE BELIEVE: a responsive card grid using the auto-fit recipe.
+         WHAT IT MEANS: repeat(auto-fit, minmax(240px, 1fr)) fits as many
+         240px-plus columns as the screen allows, with no media query. -->
+    <section class="section section--tint">
+      <div class="container">
+        <div class="section__head">
+          <h2>What We Believe</h2>
+          <p>Three ideas guide everything we make.</p>
+        </div>
+
+        <div class="values">
+
+          <article class="value">
+            <!-- Decorative SVG icon (star). aria-hidden hides it from screen
+                 readers because the heading already carries the meaning. -->
+            <svg class="value__icon" viewBox="0 0 24 24" role="img" aria-hidden="true">
+              <polygon points="12,2 15,9 22,9 16,14 18,22 12,17 6,22 8,14 2,9 9,9"
+                       fill="#c46a3f"/>
+            </svg>
+            <h3>Preserve</h3>
+            <p>We record the words, dishes and songs now, before the people who
+               remember them best are gone.</p>
+          </article>
+
+          <article class="value">
+            <!-- Decorative SVG icon (check mark) drawn with a path. -->
+            <svg class="value__icon" viewBox="0 0 24 24" role="img" aria-hidden="true">
+              <circle cx="12" cy="12" r="11" fill="#7a3b2e"/>
+              <path d="M7 12.5 L11 16.5 L17.5 8" fill="none" stroke="#fdf8f3"
+                    stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <h3>Teach</h3>
+            <p>We keep every lesson short and welcoming, so anyone can learn a
+               little Nubian without feeling lost.</p>
+          </article>
+
+          <article class="value">
+            <!-- Decorative SVG icon (heart) drawn with a path. -->
+            <svg class="value__icon" viewBox="0 0 24 24" role="img" aria-hidden="true">
+              <path d="M12 21 C 5 15, 3 10, 6.5 7 C 9 5, 12 7, 12 9
+                       C 12 7, 15 5, 17.5 7 C 21 10, 19 15, 12 21 Z"
+                    fill="#c46a3f"/>
+            </svg>
+            <h3>Share</h3>
+            <p>We give the culture back to the community — free to watch, easy to
+               pass on, and proud to celebrate.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CALLOUT: a pull-quote / mission statement with a colored left border. -->
+    <section class="section">
+      <div class="container">
+        <aside class="callout">
+          <p>“A language is not just words — it is a way of remembering who we
+             are. Huwa exists so the next generation still has the words.”</p>
+        </aside>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER (identical markup to index.html) -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Huwa. Celebrating Nubian culture.</p>
+      <p><a href="mailto:amgadbisher24@gmail.com">amgadbisher24@gmail.com</a></p>
+      <div class="site-footer__social">
+        <a href="#" aria-label="Huwa on Instagram">Instagram</a>
+        <a href="#" aria-label="Huwa on YouTube">YouTube</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

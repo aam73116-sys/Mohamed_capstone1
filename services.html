@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<!-- WHAT IT IS: the Services / Content page (page 3 of 5) of the Huwa site.
+     WHAT IT DOES: shows what the channel offers, plus a Tailwind membership
+     section. WHAT IT MEANS: lang="en" states the page language for screen
+     readers. -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Content — Huwa</title>
+  <!-- our own shared stylesheet (styles the whole site) -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Tailwind Play CDN: loads Tailwind's utility classes for the one
+       Tailwind-only section further down. It styles only elements that use
+       Tailwind classes, so it does not affect the rest of the page. -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+
+  <!-- =================================================================
+       HEADER (identical markup to index.html, with the real SVG logo)
+       ================================================================= -->
+  <header class="site-header">
+    <div class="container">
+
+      <a href="index.html" class="logo" aria-label="Huwa home">
+        <svg class="logo__mark" width="42" height="42" viewBox="0 0 48 48" role="img" aria-labelledby="logoTitle">
+          <!-- Real hand-written logo: sun (circle) + domed house (path) + door and ground (rects) -->
+          <title id="logoTitle">Huwa logo — a Nubian domed house beneath the sun</title>
+          <circle cx="24" cy="13" r="6" fill="#c46a3f"/>
+          <path d="M8 40 L8 27 Q24 11 40 27 L40 40 Z" fill="#7a3b2e"/>
+          <rect x="20" y="30" width="8" height="10" rx="4" fill="#fdf8f3"/>
+          <rect x="5" y="40" width="38" height="3" rx="1.5" fill="#7a3b2e"/>
+        </svg>
+        <span class="logo__name">Huwa</span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu"
+              aria-controls="primaryNav" aria-expanded="false">&#9776;</button>
+
+      <nav class="nav" id="primaryNav" aria-label="Main navigation">
+        <ul class="nav__list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Content</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <main>
+
+    <!-- PAGE HERO: short banner with the page title and a one-line intro. -->
+    <section class="page-hero">
+      <div class="container">
+        <h1>Our Content</h1>
+        <p>Everything Huwa makes to keep Nubian culture alive — in short,
+           friendly pieces you can enjoy any time.</p>
+      </div>
+    </section>
+
+    <!-- =============================================================
+         SERVICES GRID — built with OUR OWN CSS (not Tailwind).
+         WHAT IT MEANS: the .services grid uses repeat(auto-fit, minmax(...))
+         so the cards reflow from 1 to many columns on their own.
+         ============================================================= -->
+    <section class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2>What We Make</h2>
+          <p>Six kinds of content, all free to watch and share.</p>
+        </div>
+
+        <div class="services">
+
+          <!-- CARD 1 -->
+          <article class="service">
+            <svg class="service__icon" viewBox="0 0 24 24" role="img" aria-hidden="true">
+              <circle cx="12" cy="12" r="11" fill="#7a3b2e"/>
+              <path d="M7 9 h10 M7 13 h10 M7 17 h6" stroke="#fdf8f3" stroke-width="1.6" stroke-linecap="round"/>
+            </svg>
+            <h3>Language Lessons</h3>
+            <p>Short clips that teach a few Nubian words at a time, with meaning
+               and pronunciation.</p>
+            <a href="gallery.html" class="btn btn--sm">Start learning</a>
+          </article>
+
+          <!-- CARD 2 -->
+          <article class="service">
+            <svg class="service__icon" viewBox="0 0 24 24" role="img" aria-hidden="true">
+              <circle cx="12" cy="12" r="11" fill="#c46a3f"/>
+              <path d="M8 6 v6 a4 4 0 0 0 8 0 V6 M12 16 v2" stroke="#fdf8f3" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+            </svg>
+            <h3>Recipe Films</h3>
+            <p>Traditional Nubian dishes cooked step by step, with the stories
+               behind each one.</p>
+            <a href="gallery.html" class="btn btn--sm">Watch recipes</a>
+          </article>
+
+          <!-- CARD 3 -->
+          <article class="service">
+            <svg class="service__icon" viewBox="0 0 24 24" role="img" aria-hidden="true">
+              <circle cx="12" cy="12" r="11" fill="#7a3b2e"/>
+              <path d="M10 7 v8.5 M10 7 l7 -1.5 v8" stroke="#fdf8f3" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+              <circle cx="8.5" cy="15.5" r="1.8" fill="#fdf8f3"/>
+              <circle cx="15.5" cy="13.5" r="1.8" fill="#fdf8f3"/>
+            </svg>
+            <h3>Music Sessions</h3>
+            <p>Nubian rhythms, instruments and songs recorded with the people who
+               keep them alive.</p>
+            <a href="gallery.html" class="btn btn--sm">Listen now</a>
+          </article>
+
+          <!-- CARD 4 -->
+          <article class="service">
+            <svg class="service__icon" viewBox="0 0 24 24" role="img" aria-hidden="true">
+              <circle cx="12" cy="12" r="11" fill="#c46a3f"/>
+              <path d="M8 7 h8 v10 l-4 -2 -4 2 Z" fill="#fdf8f3"/>
+            </svg>
+            <h3>Story Archive</h3>
+            <p>Folk tales and family memories, saved so the next generation can
+               still hear them.</p>
+            <a href="gallery.html" class="btn btn--sm">Read stories</a>
+          </article>
+
+          <!-- CARD 5 -->
+          <article class="service">
+            <svg class="service__icon" viewBox="0 0 24 24" role="img" aria-hidden="true">
+              <circle cx="12" cy="12" r="11" fill="#7a3b2e"/>
+              <rect x="7" y="7" width="4" height="4" rx="1" fill="#fdf8f3"/>
+              <rect x="13" y="7" width="4" height="4" rx="1" fill="#f6c88a"/>
+              <rect x="7" y="13" width="4" height="4" rx="1" fill="#f6c88a"/>
+              <rect x="13" y="13" width="4" height="4" rx="1" fill="#fdf8f3"/>
+            </svg>
+            <h3>Colors &amp; Patterns</h3>
+            <p>The bright colors and geometric patterns of Nubian homes, art and
+               clothing, explained simply.</p>
+            <a href="gallery.html" class="btn btn--sm">Explore</a>
+          </article>
+
+          <!-- CARD 6 -->
+          <article class="service">
+            <svg class="service__icon" viewBox="0 0 24 24" role="img" aria-hidden="true">
+              <circle cx="12" cy="12" r="11" fill="#c46a3f"/>
+              <rect x="7" y="7" width="10" height="9" rx="1.5" fill="none" stroke="#fdf8f3" stroke-width="1.6"/>
+              <path d="M7 10 h10 M10 6 v2 M14 6 v2" stroke="#fdf8f3" stroke-width="1.6" stroke-linecap="round"/>
+            </svg>
+            <h3>Traditions Calendar</h3>
+            <p>Weddings, feasts and seasonal customs — what they are and when they
+               happen through the year.</p>
+            <a href="gallery.html" class="btn btn--sm">See the calendar</a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- TAILWIND SECTION -->
+    <!-- =============================================================
+         MEMBERSHIP PRICING — built ONLY with Tailwind utility classes.
+         WHAT IT IS: three support tiers side by side.
+         WHAT IT DOES: Tailwind classes handle all the styling here — no custom
+         CSS and no style="". grid-cols-1 md:grid-cols-3 is one responsive
+         prefix; text-sm sm:text-base and p-6 lg:p-8 are two more. hover: states
+         are on the buttons. WHAT IT MEANS: this section proves I can style a
+         block entirely with a utility framework. -->
+    <section class="bg-[#f7ede3] py-16 px-4">
+      <div class="max-w-5xl mx-auto">
+        <div class="text-center mb-10">
+          <h2 class="text-3xl sm:text-4xl font-bold text-[#7a3b2e]">Support Huwa</h2>
+          <p class="mt-2 text-sm sm:text-base text-[#6b5d54]">All content stays free. Memberships just help us make more of it.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+          <!-- Plan 1 -->
+          <div class="bg-white rounded-2xl border border-[#eadfd5] p-6 lg:p-8 flex flex-col shadow-sm transition hover:shadow-xl hover:-translate-y-1">
+            <h3 class="text-xl font-bold text-[#7a3b2e]">Friend</h3>
+            <p class="mt-1 text-sm text-[#6b5d54]">Keep the lights on.</p>
+            <p class="my-4 text-3xl font-bold text-[#2b2b2b]">$3<span class="text-base font-normal text-[#6b5d54]">/mo</span></p>
+            <ul class="text-sm text-[#2b2b2b] space-y-2 flex-1">
+              <li>Early access to new videos</li>
+              <li>Members-only newsletter</li>
+            </ul>
+            <a href="contact.html" class="mt-6 text-center bg-[#7a3b2e] text-white rounded-full py-2.5 font-semibold transition hover:bg-[#c46a3f] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#7a3b2e]">Join as Friend</a>
+          </div>
+
+          <!-- Plan 2 (featured) -->
+          <div class="bg-[#7a3b2e] text-white rounded-2xl p-6 lg:p-8 flex flex-col shadow-lg md:scale-105 transition hover:-translate-y-1">
+            <h3 class="text-xl font-bold">Supporter</h3>
+            <p class="mt-1 text-sm text-[#f3d9cc]">Our most popular tier.</p>
+            <p class="my-4 text-3xl font-bold">$7<span class="text-base font-normal text-[#f3d9cc]">/mo</span></p>
+            <ul class="text-sm space-y-2 flex-1">
+              <li>Everything in Friend</li>
+              <li>Vote on upcoming topics</li>
+              <li>Name in the credits</li>
+            </ul>
+            <a href="contact.html" class="mt-6 text-center bg-white text-[#7a3b2e] rounded-full py-2.5 font-semibold transition hover:bg-[#f6c88a] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">Join as Supporter</a>
+          </div>
+
+          <!-- Plan 3 -->
+          <div class="bg-white rounded-2xl border border-[#eadfd5] p-6 lg:p-8 flex flex-col shadow-sm transition hover:shadow-xl hover:-translate-y-1">
+            <h3 class="text-xl font-bold text-[#7a3b2e]">Patron</h3>
+            <p class="mt-1 text-sm text-[#6b5d54]">For the biggest fans.</p>
+            <p class="my-4 text-3xl font-bold text-[#2b2b2b]">$15<span class="text-base font-normal text-[#6b5d54]">/mo</span></p>
+            <ul class="text-sm text-[#2b2b2b] space-y-2 flex-1">
+              <li>Everything in Supporter</li>
+              <li>Quarterly video call</li>
+              <li>A Huwa thank-you gift</li>
+            </ul>
+            <a href="contact.html" class="mt-6 text-center bg-[#7a3b2e] text-white rounded-full py-2.5 font-semibold transition hover:bg-[#c46a3f] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#7a3b2e]">Join as Patron</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- END TAILWIND SECTION -->
+
+    <!-- FINAL CTA: sends visitors to the Contact page (own CSS). -->
+    <section class="cta">
+      <h2>Have an idea for us?</h2>
+      <p>Tell us what you'd love to see on Huwa — a word, a recipe, a song.</p>
+      <a href="contact.html" class="btn">Contact Us</a>
+    </section>
+
+  </main>
+
+  <!-- FOOTER (identical markup to index.html) -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Huwa. Celebrating Nubian culture.</p>
+      <p><a href="mailto:amgadbisher24@gmail.com">amgadbisher24@gmail.com</a></p>
+      <div class="site-footer__social">
+        <a href="#" aria-label="Huwa on Instagram">Instagram</a>
+        <a href="#" aria-label="Huwa on YouTube">YouTube</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
