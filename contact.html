@@ -1,7 +1,4 @@
 <!DOCTYPE html>
-<!-- WHAT IT IS: the Contact page (page 5 of 5) of the Huwa site.
-     WHAT IT DOES: shows a working Formspree contact form plus contact details.
-     WHAT IT MEANS: lang="en" states the page language for screen readers. -->
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -11,15 +8,10 @@
 </head>
 <body>
 
-  <!-- =================================================================
-       HEADER (identical markup to the other pages, with the SVG logo)
-       ================================================================= -->
   <header class="site-header">
     <div class="container">
-
       <a href="index.html" class="logo" aria-label="Huwa home">
         <svg class="logo__mark" width="42" height="42" viewBox="0 0 48 48" role="img" aria-labelledby="logoTitle">
-          <!-- Real hand-written logo: sun (circle) + domed house (path) + door and ground (rects) -->
           <title id="logoTitle">Huwa logo — a Nubian domed house beneath the sun</title>
           <circle cx="24" cy="13" r="6" fill="#c46a3f"/>
           <path d="M8 40 L8 27 Q24 11 40 27 L40 40 Z" fill="#7a3b2e"/>
@@ -28,12 +20,8 @@
         </svg>
         <span class="logo__name">Huwa</span>
       </a>
-
-      <!-- Hamburger button: shown under 768px; script.js toggles the menu and
-           keeps aria-expanded in step with whether it is open. -->
       <button class="nav-toggle" id="navToggle" aria-label="Open menu"
               aria-controls="primaryNav" aria-expanded="false">&#9776;</button>
-
       <nav class="nav" id="primaryNav" aria-label="Main navigation">
         <ul class="nav__list">
           <li><a href="index.html">Home</a></li>
@@ -43,13 +31,10 @@
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
-
     </div>
   </header>
 
   <main>
-
-    <!-- PAGE HERO: short banner with the page title and a one-line intro. -->
     <section class="page-hero">
       <div class="container">
         <h1>Contact</h1>
@@ -60,53 +45,36 @@
     <section class="section">
       <div class="container contact-grid">
 
-        <!-- =========================================================
-             CONTACT FORM — posts straight to Formspree (no JavaScript).
-             WHAT IT MEANS: the browser checks the fields using required,
-             type="email" and minlength before it sends; Formspree then emails
-             the message. The hidden _next field sends the visitor to our own
-             thank-you page after a successful send.
-             ========================================================= -->
-        <form class="contact-form"
-              action="https://formspree.io/f/https://formspree.io/f/xeagvwgg"
-              method="POST">
+        <!-- Contact form: posts to Formspree with method POST; the browser
+             validates the fields first using required / type=email / minlength. -->
+        <form class="contact-form" action="https://formspree.io/f/xeagvwgg" method="POST">
 
-          <!-- Name: required text input, paired with its label via for/id. -->
           <div class="field">
             <label for="name">Your name</label>
             <input type="text" id="name" name="name" required>
           </div>
 
-          <!-- Email: type="email" makes the browser check the format. -->
           <div class="field">
             <label for="email">Your email</label>
             <input type="email" id="email" name="email" required>
           </div>
 
-          <!-- Subject: optional text input. -->
           <div class="field">
             <label for="subject">Subject <span class="opt">(optional)</span></label>
             <input type="text" id="subject" name="subject">
           </div>
 
-          <!-- Message: required textarea; minlength="10" blocks very short notes. -->
           <div class="field">
             <label for="message">Message</label>
             <textarea id="message" name="message" rows="5" minlength="10" required></textarea>
           </div>
 
-          <!-- Hidden field: after a successful send, Formspree redirects here. -->
           <input type="hidden" name="_next"
-                 value="https://aam73116-sys.github.io/Mohamed_capstone/thanks.html">
+                 value="https://aam73116-sys.github.io/Mohamed_capstone1/thanks.html">
 
           <button type="submit" class="btn">Send message</button>
         </form>
 
-        <!-- =========================================================
-             CONTACT DETAILS — email, phone, address and social links.
-             WHAT IT MEANS: mailto: opens the mail app, tel: starts a call on a
-             phone, and <address> is the semantic element for contact info.
-             ========================================================= -->
         <aside class="contact-details">
           <h2>Other ways to reach us</h2>
           <p><strong>Email:</strong><br>
@@ -126,10 +94,8 @@
 
       </div>
     </section>
-
   </main>
 
-  <!-- FOOTER (identical markup to the other pages) -->
   <footer class="site-footer">
     <div class="container">
       <p>&copy; 2026 Huwa. Celebrating Nubian culture.</p>
